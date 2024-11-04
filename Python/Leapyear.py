@@ -12,6 +12,6 @@ else:
          print("Not a Leap year")
     
    
-
+x=input("")
 
 

@@ -21,5 +21,6 @@ while(flag):
     c=input("Do you want to quit?(y/n)")
     if(c=="y" or c=="Y"):
         flag=False
+x=input("")
         
     
