@@ -1,5 +1,5 @@
 import math
 
-def getVolume(rad):
+def getSphereVolume(rad):
     return (4/3)*math.pi*(rad**3)
     

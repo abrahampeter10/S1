@@ -1,4 +1,4 @@
-def getVolume(len,bre,height):
+def getCuboidVolume(len,bre,height):
     return len*bre*height
 
     
