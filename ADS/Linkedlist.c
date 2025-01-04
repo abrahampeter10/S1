@@ -24,7 +24,7 @@ void main(){
     while(1){
     int choice;
     printf("\nEnter your choice: ");
-    printf("\n1:INSERT - - - 2: DELETE - - - 3: DISPLAY - - - 4: EXIT - - - 5: CREATE -- 6:REVERSE - - - 7: SEARCH ");
+    printf("\n1:INSERT - - - 2: DELETE - - - 3: DISPLAY - - - 4: EXIT - - - 5: CREATE -- 6:REVERSE - - - 7: SEARCH - - - 8: SORT ");
     scanf("%d", &choice);
     switch(choice){
         case 1:
@@ -271,4 +271,26 @@ void searchElement(){
     printf("Element found");
     else
     printf("Element not found");
+}
+void sort(){
+    if(head==NULL){
+        printf("Nothing to print");
+    }else{
+        current=head;
+        while(current!=NULL){
+
+        struct node *index=current->next;
+
+        while(index!=NULL){
+            if(index->data<current->data){
+                int temp=index->data;
+                index->data=current->data;
+                current->data=temp;
+            }
+            index=index->next;
+        }
+        current=current->next;
+        }
+    }
+    display();
 }
