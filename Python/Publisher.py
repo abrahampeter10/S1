@@ -8,7 +8,6 @@ class Publisher:
 class Book(Publisher):
     def __init__(self, pubname, title, author):
         super().__init__(pubname)
-        self.__pubname = pubname
         self.__title= title
         self.__author = author
         
