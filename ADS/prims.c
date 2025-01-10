@@ -17,10 +17,9 @@ int main(){
   int e=0,cost=0;
   visited[0]=1;
   while(e<n-1){
-    int u,v,min;
+    int u,v,min=__INT_MAX__;
     for(int i=0;i<n;i++){
         if(visited[i]==1){
-            min=__INT_MAX__;
             for(int j=0;j<n;j++){
                 if(adj[i][j]<min && visited[j]!=1){
                     min=adj[i][j];
