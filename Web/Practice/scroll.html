@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+</head>
+<body style="background-color: rgb(75, 75, 88); color: white;">
+
+<marquee behavior="alternate" scrollamount="50">Welcome to the page</marquee>
+<form id="registrationForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <label for="retype-password">Retype Password:</label><br>
+    <input type="password" id="retype-password" name="retype-password"><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+
+<script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const password = document.getElementById("password").value;
+        const retypePassword = document.getElementById("retype-password").value;
+
+        if (password !== retypePassword) {
+            alert("Passwords do not match. Please try again.");
+        } else {
+            alert("Form submitted successfully!");
+        }
+    });
+</script>
+
+</body>
+</html>

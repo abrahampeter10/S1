@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        .js-para{
+            font-size: larger;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .js-para h1{
+            text-align: center;
+            background-color: blanchedalmond;
+        }
+
+        button{
+            
+            align-items: center;
+            background-color: aquamarine;
+            height: 40px;
+            width: 49%;
+            
+        }
+        
+
+        #math{
+            display: none;
+            width: 50%;
+        }
+        #string{
+width: 50%;
+display: none;
+}
+           
+    </style>
+</head>
+<body>
+    <div class="js-para">
+    <h1 id="h1-js">Javascript</h1>
+    <p>JS is the head!!! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi veritatis velit quos distinctio fuga laboriosam cupiditate sint quia vero. Dolorem quos eligendi nisi optio quisquam numquam quod ullam aliquid quam.
+    Quo, porro possimus maxime nobis inventore fugiat. Autem eius, ut enim iure aliquam dolores repudiandae culpa accusamus, velit quia aperiam optio rerum voluptates quas atque perspiciatis nemo quo? Error, cumque?
+    Beatae perspiciatis quibusdam facere ex labore cum eveniet suscipit ratione esse rem. Quae accusamus neque culpa dicta, quas cum dolores praesentium expedita repellendus incidunt provident molestias tenetur non voluptas optio!
+    Excepturi sunt quaerat ipsum quas quidem fugiat a. Omnis earum eveniet corrupti nisi cum commodi eum! Esse voluptates soluta magnam mollitia nesciunt, repellat itaque nemo sequi, facilis reiciendis nulla debitis.</p>
+    <button class="str-button" onclick="showString()">String</button>
+    <button class="math-button" onclick="showMath()">Math</button>
+    </div>
+        <div id="string">
+        <h2>String objects</h2>
+        <ol>
+            <li>fsdfsd</li>
+            <pre>sdjbd</pre>
+            <li>fsdfsd</li>
+            <pre>sdjbd</pre>
+            <li>fsdfsd</li>
+            <pre>sdjbd</pre>
+            <li>fsdfsd</li>
+            <pre>sdjbd</pre><li>fsdfsd</li>
+            <pre>sdjbd</pre>
+
+        </ol>
+
+    </div>
+    <div id="math">
+        <h2>Math objects</h2>
+        <ol>
+            <li>fsdsdfsdffsd</li>
+            <pre>sdjbd</pre>
+            <li>fsdsdfsdffsd</li>
+            <pre>sdjbd</pre>
+            <li>fsdsdfsdffsd</li>
+            <pre>sdjbd</pre>
+            <li>fsdsdfsdffsd</li>
+            <pre>sdjbd</pre><li>fsdfsd</li>
+            <pre>fsdsdfsdffsd</pre>
+            
+        </ol>
+
+</div>
+</body>
+
+<script>
+let stringElem = document.getElementById('string');
+let mathElem = document.getElementById('math');
+
+function showMath() {
+    mathElem.style.display = 'block';
+    stringElem.style.display = 'none';
+    
+}
+
+function showString() {
+    stringElem.style.display = 'block';
+    mathElem.style.display = 'none';
+}
+
+</script>
+</html>

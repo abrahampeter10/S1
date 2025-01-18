@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="success.html" onsubmit="return validateForm()">
+        Name:<input type = text id="username"  name="username" placeholder="Enter ur name" ><br>
+        Password:<input type = text id="password" name="password" ><br>
+        Age:<input type = text id="age" name="age"><br>
+        <input type="submit" name="submit">
+    </form>
+</body>
+<script>
+    function usernameValidate(){
+        var username=document.getElementById('username');
+        if(username.value=="" || !/^[a-zA-Z\s]+$/.test(username)){
+        alert("No Username ie Cannot be blank")
+        return false;
+        }
+        else{
+            return true;
+        }
+    }
+    function passwordValidate(){
+        var username=document.getElementById('password');
+        if(password.value=="" || password.value.length<8){
+        alert("Some issue with the password")
+        return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    function ageCheck(){
+        var age=document.getElementById('age').value;
+        if(age.length===""){
+            alert("Age cannot be blank")
+            return false;
+        }
+        if(isNaN(age)){
+            alert("Age should be an number")
+            return false
+        }
+        if(Number(age)<0){
+            alert("Age should be positive")
+            return false;
+        }
+
+        return true;
+
+//         if(age.length=="" || isNaN(age) || Number(age)<0){
+//         alert("Age has an issue")
+//     return false;
+// }
+//     else{
+//         return true;
+//     }
+    }
+
+    function validateForm(){
+        if(usernameValidate() && passwordValidate() && ageCheck()){
+
+        
+        return true;
+        }
+        return false;
+     
+    }
+</script>
+</html>

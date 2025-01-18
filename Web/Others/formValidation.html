@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validateAll()" action="bgColor.html" >
+
+        Name:<input type="text" id="name"><br>
+        ID: <input type="text" id="id"><br>
+        Age:<input type="text" id="age"><br>
+        Email: <input type="email" name="email"><br>
+        Password: <input type="password" id="password"><br>
+        <input type="submit" name="submit">
+    </form>
+</body>
+
+<script>
+    function validateName(){
+        let name=document.getElementById('name').value;
+        if(name.length=="" || name.length<3 || !isNaN(name)){
+            alert("Name is in invalid form")
+            return false
+        } else{
+        return true;
+        }
+    }
+
+    function validateId(){
+        let id=document.getElementById('id').value;
+        if(/^[TVE24MCA-]+\d{4}$/.test(id)){
+            return true
+        }
+        alert("ID is in invalid format")
+        return false
+    }
+
+    function validateAge(){
+        let age=document.getElementById('age').value;
+        if(/^\d+$/.test(age)) {
+            return true
+        } 
+            alert("Age is not valid")
+            return false
+    }
+
+    function validateMail(){
+        let mail=document.getElementById('email').value;
+        if(/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
+            return true
+        }
+        alert("invalid mail id")
+        return false
+    }
+    function passwordValidate(){
+        let password=document.getElementById('password').value;
+        if(password.length<8 || password===""){
+            alert("Invalid Password format")
+            return false
+        }
+        if(/[A-Z]/.test(password)==false){
+            alert("Invalid Password format")
+            return false
+        }
+        return true
+    }
+    function validateAll(){
+        if(validateName() && validateId() && validateAge() && passwordValidate()){
+            return true
+        } else{
+            return false
+        }
+    }
+</script>
+</html>

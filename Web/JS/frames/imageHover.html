@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Change on Hover</title>
+</head>
+<body>
+    <h1>Hover over the image</h1>
+    <!-- The image -->
+    <img 
+        id="myImage" 
+        src="https://images.pexels.com/photos/1165991/pexels-photo-1165991.jpeg?cs=srgb&dl=pexels-jplenio-1165991.jpg&fm=jpg" 
+        alt="Normal Image" 
+        width="600" 
+        height="400">
+
+    <script>
+        // Change to hover image when the mouse is over it
+        document.getElementById("myImage").onmouseover = function() {
+            this.src = "https://img.freepik.com/free-photo/people-walking-green-grass-field-daytime_395237-36.jpg"; // Change to your hover image
+        };
+
+        // Change back to the original image when the mouse leaves
+        document.getElementById("myImage").onmouseout = function() {
+            this.src = "https://images.pexels.com/photos/1165991/pexels-photo-1165991.jpeg?cs=srgb&dl=pexels-jplenio-1165991.jpg&fm=jpg"; // Change back to the original image
+        };
+    </script>
+</body>
+</html>
